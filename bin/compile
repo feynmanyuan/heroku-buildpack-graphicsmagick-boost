@@ -34,6 +34,21 @@ function package_download() {
   curl $package -s -o - | tar xzf - -C $location
 }
 
+
+echo "Installing boost $BOOST_VERSION" | arrow
+
+# we need this directory, it's our destination
+boost_lib_path=$BUILD_DIR/vendor/boost
+mkdir -p $boost_lib_path
+
+# vendor directories
+VENDORED_BOOST="$(mktmpdir boost)"
+package_download "${BOOST_REMOTE_PATH}" "${VENDORED_BOOST}"
+
+cp -R $VENDORED_BOOST/* $boost_lib_path
+
+echo "Installation completed" | indent
+
 echo "Installing zlib $ZLIB_VERSION" | arrow
 
 # we need this directory, it's our destination
