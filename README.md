@@ -1,7 +1,7 @@
 heroku-buildpack-imagemagick
 ===========================
 
-Use the latest version of ImageMagick inside Heroku _Cedar_.
+Use the latest version of GraphicsMagick + Boost inside Heroku _Cedar_.
 At the moment it is bundled the version 6.8.1-10.
 
 ## Usage
@@ -15,8 +15,8 @@ heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-mult
 
 Then, create a `.buildpacks` file inside your app:
 ```
-https://github.com/mcollina/heroku-buildpack-imagemagick
-https://github.com/heroku/heroku-buildpack-nodejs
+https://github.com/vietnamdevelopers/heroku-buildpack-graphicsmagick-boost.git
+https://github.com/heroku/heroku-buildpack-python
 ```
 
 This example was based on the nodejs buildpack, but it can be used with
