@@ -98,6 +98,6 @@ echo "Building runtime environment for graphicsmagick" | arrow
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/bin:\$PATH\"" > $BUILD_DIR/.profile.d/graphicsmagick.sh
 echo "export LD_LIBRARY_PATH=\"/app/vendor/zlib/lib/:/app/vendor/libpng/lib/:/app/vendor/graphicsmagick/lib/:\$LD_LIBRARY_PATH\"" > $BUILD_DIR/.profile.d/graphicsmagick.sh
-echo "export LD_PRELOAD=\"/app/vendor/boost/lib/libboost_python.so\"" > $BUILD_DIR/.profile.d/graphicsmagick.sh
+#echo "export LD_PRELOAD=\"/app/vendor/boost/lib/libboost_python.so\"" > $BUILD_DIR/.profile.d/graphicsmagick.sh
 
 
